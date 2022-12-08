@@ -1,0 +1,106 @@
+.banner{
+    background-repeat: no-repeat;
+    background-position: right;
+    height: 280px;
+    background-size: cover;
+    @media (min-width: 992px){
+        height: 340px;
+    }
+    .container{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            font-size: 32px;
+            line-height: 36px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+            @media (min-width: 992px){
+                font-size: 36px;
+                line-height: 43.88px;
+            }
+        }
+    }
+
+}
+.banner.largeBanner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    .container{
+        flex-direction: column;
+        justify-content: flex-end;
+        .banner-content{
+            margin-bottom: 35px;
+            h1{
+                font-weight: 700;
+                font-size: 28px;
+                line-height: 43.88px;
+                color: #fff;
+                text-align: center;
+                margin-bottom: 12px;
+            }
+            p{
+                text-align: center;
+                font-size: 18px;
+                font-weight: 500;
+                color: #fff;
+                line-height: 21.94px;
+            }
+        }
+        .banner-services{
+            display: flex;
+            width: 100%;
+            .service-content{
+                margin-bottom: 20px;
+                background-color: $yellowColor;
+                border-radius: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
+                padding: 40px 25px 30px 25px;
+                min-height: 245px;
+                @media (min-width: 992px){
+                    padding: 80px 33px 51px 33px;
+                }
+                h3{
+                    font-size: 18px;
+                    font-weight: 600;
+                    line-height: 21.94px;
+                    color: $headingColor;
+                }
+                .icon{
+                    margin: 20px 0;
+                    svg{
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+                p{
+                    font-weight: 40;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $headingColor;
+                }
+            }
+        }
+    }
+.link-to-services{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: $greenColor;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+}

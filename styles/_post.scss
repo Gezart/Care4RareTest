@@ -1,0 +1,105 @@
+.post-wrapper {
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column-reverse;
+    @media (min-width: 1199px){
+        flex-flow: row wrap;
+        margin-top: 100px;
+    }
+    .post-details {
+        background: #fff;
+        border: 1px solid #E5E7EB;
+        padding: 30px;
+        padding-top: 20px;
+        border-radius: 6px;
+        max-width: 400px;
+        height: max-content;
+        h3{
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 40px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            padding-bottom: 17px;
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .details{
+            .detail{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                .name, .value{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 40px;  
+                    letter-spacing: -2%;
+                    color: $headingColor; 
+                    font-family: 'Montserrat', sans-serif;
+                }
+                .value{
+                    color: $textColor;
+                    font-weight: 400;
+                    text-align: right;
+                }
+            }
+        }
+
+    }
+    
+    .image-content {
+        margin-bottom: 40px;
+        @media (min-width: 1199px){
+            width: calc(100% - 440px);
+            margin-bottom: 0;
+            margin-left: 40px;
+        }
+        @media (min-width: 1299px){
+            margin-left: 80px;
+            width: calc(100% - 480px);
+        }
+        .post-image {
+            img {
+                width: 100%;
+                border-radius: 6px;
+            }
+        }
+        h1{
+            font-size: 24px;
+            color: #000;
+            font-weight: 700;
+            line-height: 28px;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            @media (min-width: 991px){
+                font-size: 36px;
+                line-height: 44px;
+                margin-bottom: 34px;
+            }
+        }
+        .content{
+            h3{
+                font-size: 18px;
+                font-weight: 700;
+                line-height: 24px;
+                margin-bottom: 15px;
+                @media (min-width: 991px){
+                    font-size: 24px;
+                    line-height: 29px;
+                    margin-bottom: 17px;
+                }
+            }
+            p{
+                margin-bottom: 19px;
+            }
+            p,li{
+                font-size: 16px;
+                color: $textColor;
+                line-height: 24px;
+            }
+
+        }
+    }
+    button{
+        @include button;
+
+    }
+}

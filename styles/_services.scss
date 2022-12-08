@@ -1,0 +1,81 @@
+.services-wrapper{
+    margin-top: 50px;
+    @media (min-width: 992px){
+        display: grid;
+        grid-template-columns: 35% calc(65% - 50px);
+        grid-gap: 50px;
+    }
+    @media (min-width: 1300px){
+        grid-template-columns: 33%  calc(67% - 140px);
+        grid-gap: 140px;
+    }
+    .services{
+        h2{
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 21.94px;
+            color: $greenColor;
+            text-transform: uppercase;
+            padding: 20px 0;
+            border-top: 1px solid #D9D9D9;
+            cursor: pointer;
+        }
+
+        .subservice{
+            padding-left: 30px;
+            h3{
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 19.5px;
+                color: $textColor;
+                margin-bottom: 15px;
+                position: relative;
+                transition: .3s;
+                cursor: pointer;
+                &:hover, &:focus, &:active{
+                    color: $blueColor;
+                    &::after{
+                        background-color: $blueColor;
+                    }
+                }
+                &::after{
+                    transition: .3s;
+                    content: '';
+                    position: absolute;
+                    left: -15px;
+                    top: 8px;
+                    border-radius: 50%;
+                    width: 3px;
+                    height: 3px;
+                    background-color: $textColor;
+                }
+            }
+        }
+    }
+    .subservices-content{
+        margin-top: 40px;
+        @media (min-width: 992px){
+            margin-top: 0;
+        }
+        img{
+            width: 100%;
+            border-radius: 6px;
+        }
+        h3{
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 22px;
+            margin-top: 35px;
+            margin-bottom: 20px;
+            color: $headingColor;            
+        }
+        p{
+            color: $textColor;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 15px;
+        }
+        
+    }
+}

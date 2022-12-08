@@ -1,0 +1,52 @@
+.team-member{
+    margin-top: 40px;
+    display: grid;
+    grid-gap: 40px;
+    @media (min-width: 575px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 992px){
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 75px;
+        margin-top: 78px;
+    }
+    @media (min-width: 1199px){
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .member{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        .image{
+            img{
+                width: 120px;
+                height: 120px;
+                margin-bottom: 20px;
+            }
+        }
+        .content{
+            h3{
+                font-size: 16px;
+                color: $greenColor;
+                font-weight: 600;
+                line-height: 22px;
+                margin-bottom: 10px;
+                text-transform: uppercase;
+                @media (min-width: 992px){
+                    font-size: 18px;
+                }
+            }
+            p{
+                font-weight: 400;
+                font-size: 16px;
+                color: $textColor;
+                line-height: 24px;
+            }
+            .job-title{
+                margin-bottom: 18px;
+            }
+        }
+    }   
+}

@@ -1,0 +1,39 @@
+.tabs{
+    margin-top: 50px;
+    display: grid;
+    border-bottom: 1px solid #E5E7EB;
+    @media (min-width: 767px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    a{
+        font-weight: 600;
+        padding-bottom: 30px;
+        // font-size: 18px !important;
+        line-height: 22px;
+        text-transform: uppercase;
+        color: $textColor;
+        @media (min-width: 767px){
+            text-align: center;
+        }
+    }
+}
+.page-jobs .tabs{
+    a{
+        &:first-child{
+            color: $greenColor;
+            @media (min-width: 767px){
+                border-bottom: 5px solid $greenColor;
+            }
+        }
+    }
+}
+.page-trainings .tabs{
+    a{
+        &:last-child{
+            color: $greenColor;
+            @media (min-width: 767px){
+                border-bottom: 5px solid $greenColor;
+            }
+        }
+    }
+}

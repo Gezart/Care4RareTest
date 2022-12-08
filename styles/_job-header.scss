@@ -1,0 +1,49 @@
+.job-header{
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #E5E7EB;
+    padding: 30px;
+    margin-top: 40px;
+    @include text;
+    h2{
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        &::after{
+            display: none;
+        }
+    }
+    .jobs-header-content{
+        padding-bottom: 30px;   
+        border-bottom: 1px solid #E5E7EB;
+    }
+    .search-filters{
+        display: grid;
+        margin-top: 20px;
+        grid-gap: 20px;
+        @media (min-width: 767px){
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 32px;
+        }
+        input{
+            outline: none;
+            background-color: #F8FAFC;
+            border: 1px solid #E5E7EB;
+            height: 50px;
+            padding: 0 30px;
+            color: $textColor;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 20px;
+            border-radius: 6px;
+            &:focus{
+                border-color: $greenColor;
+            }
+            &::placeholder{
+                color: #D1D5DB;
+            }
+            @media (min-width: 992px){
+                padding: 0 40px;
+            }
+        }
+    }
+}

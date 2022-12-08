@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+}
+
+$blueColor: #0F59A3;
+$greenColor: #4C9D10;
+$yellowColor: #FBBF24;
+$headingColor: #111827;
+$textColor: #6B7280;
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #F5F5F5;
+}
+h1,h2,h3,h4,h5,h6,a,span,li,ul,p, label, option, input{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;    
+}
+.container{
+    max-width: calc(100% - 40px);
+    margin: auto;
+    @media (min-width: 992px) { 
+        max-width: calc(100% - 80px);
+     }
+     @media (min-width: 1500px){
+        max-width: 1440px;
+     }
+}
+@mixin text {
+    h2 {
+        font-size: 24px;
+        line-height: 29px;
+        font-weight:700;
+        text-align: center;
+        position: relative;
+        color: $headingColor;
+        margin-bottom: 35px;
+        @media (min-width: 992px){
+            margin-bottom: 50px;
+            font-size: 28px;
+            line-height: 40px;
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            height: 5px;
+            width: 55px;
+            background-color: $greenColor;
+            left: 50%;
+            bottom: -15px;
+            transform: translate(-50%, -50%);
+        }
+    }
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 28px;
+        color: $textColor;
+        @media (min-width: 992px){
+            font-size: 18px;
+            line-height: 40px;
+        }
+    }
+}
+@mixin button {
+    background-color: $greenColor;
+    color: #fff;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding: 0 15px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: .4s;
+    &:hover{
+       background-color: #fff;
+       color: $greenColor;
+       border: 1px solid $greenColor;
+       padding-right: 10px;
+       svg{
+           path{
+               stroke: $greenColor;
+           }
+       }
+    }
+    @media (min-width: 992px){
+       font-size: 18px;
+       line-height: 28px;
+       padding: 17px 35px;
+       &:hover{
+            padding-right: 25px;
+       }
+    }
+}

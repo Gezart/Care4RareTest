@@ -1,0 +1,7 @@
+.container{
+    max-width: calc(100% - 40px);
+    margin: auto;
+    @media (min-width: 992px) { 
+        max-width: calc(100% - 80px);
+     }
+}

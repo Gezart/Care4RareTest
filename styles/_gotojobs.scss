@@ -1,0 +1,47 @@
+.gotojobs{
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 40px;
+    @media (min-width: 650px){
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+    .item{
+        img{
+            width: 100%;
+        }
+        h3{
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 22px;
+            text-align: center;
+            color: $headingColor;
+            text-transform: uppercase;
+            
+            padding: 32px 20px;
+        }
+        .link-to-jobs{
+            background-color: $greenColor;
+            border-radius: 6px;
+            padding: 17px 20px 17px 42px;
+            transition: .4s;
+            &:hover{
+                padding-right: 10px;
+                
+            }
+            svg{
+                transition: .4s;
+            }
+            a{
+                display: flex;
+                justify-content: space-between;
+                color:#fff;
+                font-weight: 600;
+                font-size: 16px;
+                line-height: 19.5px;
+                text-transform: uppercase;
+                
+            }
+        }   
+    }
+}
